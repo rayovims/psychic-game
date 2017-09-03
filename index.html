@@ -3,12 +3,32 @@
 
 <head>
     <title>Psychic Game!</title>
-    <link ref="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link ref="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 </head>
 
 <body>
-    <div id="game">Press any key to begin</div>
+	<div class="jumbotron">
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-6">
+				</div>
+				<div class="col-md-11"></div>
+			</div>
+			<div class="row">
+				<div class="col-md-1"></div>
+				<div class="col-md-6" id="game">
+					<p><h1 id="header">The Psychic Game</h1></p>
+					<p><h4>Guess what letter I'm thinking of</h4></p>
+					<p><h4>Wins: 0</h4></p>
+					<p><h4>Losses: 0</h4></p>
+					<p><h4>Guesses Left: 9</h4></p>
+					<p><h4>Your guesses so far: </h4></p>
+				</div>
+				<div class="col-md-5"></div>
+			</div>
+	</div>
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
 

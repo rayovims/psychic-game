@@ -1,4 +1,5 @@
-var availableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var availableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", 
+"i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
     var wins = 0;
     var losses = 0;
     var guessesLeft = 9;
@@ -6,7 +7,8 @@ var availableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "
     var userGuess = null;
     var letterToBeGuessed = availableLetters[Math.floor(Math.random() * availableLetters.length)];
 
-    console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " + guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
+    console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " + 
+        guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
 
     document.onkeyup = function(event) {
 
@@ -25,7 +27,8 @@ var availableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "
             letterToBeGuessed = availableLetters[Math.floor(Math.random() * availableLetters.length)];
 
             //For debugging
-            console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " + guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
+            console.log("Wins: " + wins + " Losses: " + losses 
+                + " GuessesLeft: " + guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
         }
 
         if (guessesLeft == 0) {
@@ -36,10 +39,14 @@ var availableLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "
             letterToBeGuessed = availableLetters[Math.floor(Math.random() * availableLetters.length)];
 
             //For debugging
-            console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " + guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
+            console.log("Wins: " + wins + " Losses: " + losses + " GuessesLeft: " 
+                + guessesLeft + " Guesses so far: " + guessesSoFar + " Computer picked: " + letterToBeGuessed);
         }
 
-        var html = "<p><h1>The Psychic Game</h1></p>" + "<p><h4>Guess what letter I\'m thinking of</h4></p>" + "<p><h4>Wins: " + wins + "</h4></p>" + "<p><h4>Losses: " + losses + "</h4></p>" + "<p><h4>Guesses Left: " + guessesLeft + "</h4></p>" + "<p><h4>Your guesses so far: " + guessesSoFar + "</h4></p>";
+        var html = "<p><h1 id='.call'>The Psychic Game</h1></p>" 
+        + "<p><h4>Guess what letter I\'m thinking of</h4></p>" + "<p><h4>Wins: " + wins + 
+        "</h4></p>" + "<p><h4>Losses: " + losses + "</h4></p>" + "<p><h4>Guesses Left: " + guessesLeft + 
+        "</h4></p>" + "<p><h4>Your guesses so far: " + guessesSoFar + "</h4></p>";
 
         document.querySelector("#game").innerHTML = html;
 
